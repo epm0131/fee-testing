@@ -40,8 +40,8 @@
      */
     function factorial(topNumber) {
         var i;
-        var total = 0;
-
+        var total = 1;
+        
         if (typeof(topNumber) !== 'number') {
             return 0;
         }

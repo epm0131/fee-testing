@@ -44,6 +44,16 @@
         it('should have a function called factorial', function() {
           expect(window.calc.factorial).to.be.a('function');
         });
+
+        it('it should calculate and give a total when given a number', function() {
+          var result = window.calc.factorial(5);
+          expect(result).to.equal(120);
+        })
+
+        it('it should return 0 when given a value that is not a number', function() {
+          var result = window.calc.factorial('Joe');
+          expect(result).to.equal(0);
+        })
       })
 
     })
