@@ -16,15 +16,26 @@
           console.log('Am I before?');
         });
 
-      it('should have a function called sum', function() {
-        expect(window.calc.sum).to.be.a('function');
-      });
+        it('should have a function called sum', function() {
+          expect(window.calc.sum).to.be.a('function');
+        });
 
-      it('should give a total when given a number', function() {
-        var result = window.calc.sum([2,3,5]);
-        console.log(window.calc.sum);
-        expect(result).to.equal(10);
-      })
+        it('should give a total when given numbers', function() {
+          var result = window.calc.sum([2,3,5]);
+          expect(result).to.equal(10);
+        });
+
+        it('should know that total is a string when given text', function() {
+          var result = window.calc.sum('Jordan');
+          expect(result).to.equal('Jordan');
+        });
+
+        it('should know that given an empty argument return undefined', function() {
+          var result = window.calc.sum();
+          expect(result).to.equal(undefined);
+        })
+
+
 
       })
     })

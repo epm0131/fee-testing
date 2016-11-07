@@ -16,6 +16,12 @@
         if (!numbers) {
             return total;
         }
+        else if(typeof(numbers) === 'string') {
+          return numbers;
+        }
+        if(typeof(numbers.forEach) !== 'function') {
+          numbers = [];
+        }
 
         numbers.forEach(function addThem(num) {
             total += num;
