@@ -4,6 +4,7 @@
     window.calc = window.calc || {};
 
     window.calc.sum = sum;
+    window.calc.factorial = factorial;
 
     /**
      * Adds whatever numbers are provided and returns the total
@@ -19,9 +20,9 @@
         else if(typeof(numbers) === 'string') {
           return numbers;
         }
-        if(typeof(numbers.forEach) !== 'function') {
-          numbers = [];
-        }
+        // if(typeof(numbers.forEach) !== 'function') {
+        //   numbers = [];
+        // }
 
         numbers.forEach(function addThem(num) {
             total += num;
