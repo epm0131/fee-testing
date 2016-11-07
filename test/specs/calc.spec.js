@@ -4,6 +4,14 @@
 
     // TODO: Your tests go here!
 
+    var expect = chai.expect;
+
+    describe('my calc', function() {
+      it('should know that obviously one equals one', function () {
+        expect(1).to.equal(1);        
+      });
+    })
+
 
 
 })();
